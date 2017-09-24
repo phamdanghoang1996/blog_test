@@ -1,11 +1,12 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
-  create_table "customers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "khachhang", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", limit: 100
     t.string "email", limit: 200
     t.string "phonenumber", limit: 20
     t.string "address", limit: 200
-    t.datetime "create_day"
+    t.datetime "ngaytao"
+    t.datetime "hehehe"
   end
 
   create_table "detail_orders", primary_key: ["id_order", "id_product"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
