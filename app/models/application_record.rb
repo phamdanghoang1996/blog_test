@@ -18,7 +18,7 @@ class ApplicationRecord < ActiveRecord::Base
     t.index ["id_order", "id_product"], name: "index_detail_orders_on_id_order_and_id_product", unique: true
   end
 
-  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "nhanvien", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", limit: 100
