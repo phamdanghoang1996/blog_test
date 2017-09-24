@@ -7,9 +7,10 @@ class ApplicationRecord < ActiveRecord::Base
     t.string "address", limit: 200
     t.datetime "ngaytao"
     t.datetime "hehehess"
+    t.datetime "Pham Dang Hoang"
   end
 
-  create_table "detail_orders", primary_key: ["id_order", "id_product"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "thongtin", primary_key: ["id_order", "id_product"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "id_order", null: false
     t.integer "id_product", null: false
     t.integer "quantity_buy"
